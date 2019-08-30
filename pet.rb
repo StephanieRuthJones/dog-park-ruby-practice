@@ -12,11 +12,13 @@ class Pet
     def dogparks
         DogPark.all.select do |dogpark|
             dogpark.pet == self
+        end
     end
 
     def owners
         dogparks.map do |dogpark|
             dogpark.owner.name
+        end
     end
 
     def self.all
