@@ -23,8 +23,17 @@ class Pet
         owners.map(&:name)
     end
 
+    def owner_ages
+        owners.map(&:age)
+    end
+
     def longest_owner_name
         owner_names.max_by(&:length)
+    end
+
+    def average_owner_age
+        (owner_ages.reduce(&:+).to_f / owners.length).round 
+        # or (owner_ages.sum.to_f / owners.length).round
     end
 
     def self.all

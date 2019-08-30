@@ -1,10 +1,11 @@
 class Owner
 
-    attr_reader :name
+    attr_reader :name, :age
     @@all = []
 
-    def initialize name
+    def initialize name, age
         @name = name
+        @age = age
         @@all << self
     end
 

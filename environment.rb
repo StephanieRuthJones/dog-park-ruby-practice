@@ -5,9 +5,10 @@ require_relative './dog_park'
 require 'pry'
 
 
-damon = Owner.new('Damon')
-andrew = Owner.new('Andrew')
-gage = Owner.new('Gage')
+damon = Owner.new('Damon', 25)
+andrew = Owner.new('Andrew', 20)
+gage = Owner.new('Gage', 22)
+arena = Owner.new('Arena', 19)
 
 spot = Pet.new('spot', 'poodle')
 ted = Pet.new('ted', 'spaniel')
