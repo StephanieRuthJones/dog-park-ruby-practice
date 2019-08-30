@@ -16,9 +16,15 @@ class Pet
     end
 
     def owners
-        dogparks.map do |dogpark|
-            dogpark.owner.name
-        end
+       dogparks.map(&:owner)
+    end
+
+    def owner_names
+        owners.map(&:name)
+    end
+
+    def longest_owner_name
+        owner_names.max_by(&:length)
     end
 
     def self.all
